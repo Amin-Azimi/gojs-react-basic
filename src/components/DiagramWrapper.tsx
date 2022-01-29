@@ -5,18 +5,12 @@
 import * as go from 'gojs';
 import { ReactDiagram } from 'gojs-react';
 import * as React from 'react';
-
 import { GuidedDraggingTool } from '../GuidedDraggingTool';
-
 import './Diagram.css';
 
 interface DiagramProps {
   nodeDataArray: Array<go.ObjectData>;
   linkDataArray: Array<go.ObjectData>;
-  modelData: go.ObjectData;
-  skipsDiagramUpdate: boolean;
-  onDiagramEvent: (e: go.DiagramEvent) => void;
-  onModelChange: (e: go.IncrementalData) => void;
 }
 
 export class DiagramWrapper extends React.Component<DiagramProps, {}> {
@@ -31,28 +25,6 @@ export class DiagramWrapper extends React.Component<DiagramProps, {}> {
     this.diagramRef = React.createRef();
   }
 
-  /**
-   * Get the diagram reference and add any desired diagram listeners.
-   * Typically the same function will be used for each listener, with the function using a switch statement to handle the events.
-   */
-  public componentDidMount() {
-    if (!this.diagramRef.current) return;
-    const diagram = this.diagramRef.current.getDiagram();
-    if (diagram instanceof go.Diagram) {
-      diagram.addDiagramListener('ChangedSelection', this.props.onDiagramEvent);
-    }
-  }
-
-  /**
-   * Get the diagram reference and remove listeners that were added during mounting.
-   */
-  public componentWillUnmount() {
-    if (!this.diagramRef.current) return;
-    const diagram = this.diagramRef.current.getDiagram();
-    if (diagram instanceof go.Diagram) {
-      diagram.removeDiagramListener('ChangedSelection', this.props.onDiagramEvent);
-    }
-  }
 
   /**
    * Diagram initialization method, which is passed to the ReactDiagram component.
@@ -133,9 +105,7 @@ export class DiagramWrapper extends React.Component<DiagramProps, {}> {
         initDiagram={this.initDiagram}
         nodeDataArray={this.props.nodeDataArray}
         linkDataArray={this.props.linkDataArray}
-        modelData={this.props.modelData}
-        onModelChange={this.props.onModelChange}
-        skipsDiagramUpdate={this.props.skipsDiagramUpdate}
+        skipsDiagramUpdate={false}
       />
     );
   }
