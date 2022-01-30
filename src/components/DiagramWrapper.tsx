@@ -87,13 +87,27 @@ export class DiagramWrapper extends React.Component<DiagramProps, {}> {
 
     // relinking depends on modelData
     diagram.linkTemplate =
-      $(go.Link,
-        new go.Binding('relinkableFrom', 'canRelink').ofModel(),
-        new go.Binding('relinkableTo', 'canRelink').ofModel(),
-        $(go.Shape),
-        $(go.Shape, { toArrow: 'Standard' })
-      );
-
+    $(go.Link,  // the whole link panel
+      $(go.Shape,  // the link shape
+        { stroke: "black" }),
+      $(go.Shape,  // the arrowhead
+        { toArrow: "standard", stroke: null }),
+      $(go.Panel, "Auto",
+        $(go.Shape,  // the label background, which becomes transparent around the edges
+          {
+            fill: $(go.Brush, "Radial", { 0: "rgb(240, 240, 240)", 0.3: "rgb(240, 240, 240)", 1: "rgba(240, 240, 240, 0)" }),
+            stroke: null
+          }),
+        $(go.TextBlock,  // the label text
+          {
+            textAlign: "center",
+            font: "10pt helvetica, arial, sans-serif",
+            stroke: "#555555",
+            margin: 4
+          },
+          new go.Binding("text", "text"))
+      )
+     );
     return diagram;
   }
 
