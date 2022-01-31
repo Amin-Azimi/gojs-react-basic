@@ -15,7 +15,6 @@ export default function App() {
   const currentFlowData = useAppSelector(selectedFlowData);
 
   // saving diagram nodes to a json file
-  //it must move to slice 
   const handleSaveClick = () => {
     saveAs(
       new Blob([JSON.stringify(currentFlowData.flowData)], {

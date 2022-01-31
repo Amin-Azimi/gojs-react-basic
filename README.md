@@ -1,21 +1,16 @@
-# gojs-react-basic
+<h1 align="center">Welcome to GoJs Simple application 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-### By Northwoods Software for [GoJS 2.1](https://gojs.net)
+### `Load Sample File`
+you can load "SampleFlow.txt" as a sample file 
 
 This project provides a basic example of using GoJS in a React app.
 Check out the [Intro page on using GoJS with React](https://gojs.net/latest/intro/react.html) for more information.
 
 It makes use of the [gojs-react](https://github.com/NorthwoodsSoftware/gojs-react) package to handle some boilerplate for setting up and tearing down a Diagram component.
-
-When running the sample, try moving around nodes, editing text, relinking, undoing (Ctrl-Z), etc. within the diagram
-and you'll notice the changes are reflected in the inspector area. You'll also notice that changes
-made in the inspector are reflected in the diagram. If you use the React dev tools,
-you can inspect the React state and see it updated as changes happen.
-
-For additional samples, see [gojs-react-samples](https://github.com/NorthwoodsSoftware/gojs-react-samples).
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-It also uses [immer](https://immerjs.github.io/immer/docs/introduction) to simplify state update operations.
+### This project is based on  Northwoods Software for [GoJS 2.1](https://gojs.net)
 
 ## Installation
 
@@ -53,8 +48,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Amin Azimi**
+
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
