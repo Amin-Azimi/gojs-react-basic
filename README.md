@@ -57,4 +57,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
