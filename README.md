@@ -4,7 +4,7 @@
 </p>
 
 ### `Load Sample File`
-you can load "SampleFlow.txt" as a sample file 
+you can load "SampleFlow.txt" as a sample file (https://github.com/Amin-Azimi/gojs-react-basic/blob/master/SampleFlow.txt)
 
 This project provides a basic example of using GoJS in a React app.
 Check out the [Intro page on using GoJS with React](https://gojs.net/latest/intro/react.html) for more information.
